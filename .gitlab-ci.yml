@@ -1,11 +1,8 @@
 visual_regression_test:
    stage: test
    image:
-     name: docker-prod.hv.devk.de/awsplattform/vendor-images/docker.io/library/node:18.16.0-alpine3.17
+     name: node:18.16.0-alpine3.17
      entrypoint: [""]
-     pull_policy: if-not-present
-   tags:
-     - cloud-vprod
    variables:
      PERCY_TOKEN: ${PERCY_TOKEN}
      PERCY_TARGET: storybook-static
